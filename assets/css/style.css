@@ -1,193 +1,165 @@
+
+/* Universal Selector: box-sizing with no padding or margin for the whole document. */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* body element: Set background color for whole document. */
 body {
     background-color: #d9dcd6;
 }
 
-.header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
-}
-
-.header h1 {
-    display: inline-block;
-    font-size: 48px;
-}
-
-.header h1 .seo {
-    color: #d9dcd6;
-}
-
-.header div {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
-
-.header div ul {
-    list-style-type: none;
-}
-
-.header div ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
+/* anchor element: Set the text color and no text decoration for all anchor elements. */
 a {
     color: #ffffff;
     text-decoration: none;
 }
 
+/* paragraph element: Set font size for all text in paragraphs to 16 pixels, for all paragraph elements. */
 p {
     font-size: 16px;
 }
 
-.hero {
+/* header element: Set padding, font, background color and text color. */
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff; 
+}
+
+/* h1 element in header: set to inline block and font size to 48 pixels. */
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+  }
+
+/* seo class in header h1 element: Set the text color for "seo" text displayed in the header. */
+header h1 .seo {
+    color: #d9dcd6;
+}
+
+/* navigation element in header element: Set top padding, right margin, float right, font and font size. */
+header nav {   
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;    
+} 
+
+/* ul element in header navagation element: Set list type to none, so no bullets are displayed. */
+header nav ul {
+    list-style-type: none;
+}
+
+/* li element of ul element in header navagation element: Set display inline block and left margin of 25 pixels. */
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+
+}
+
+/* img_market_meeting class: background image.  Set height, width, bottom margin, image URL, background size and position. */
+.img_market_meeting {
     height: 800px;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 25px; 
     background-image: url("../images/digital-marketing-meeting.jpg");
     background-size: cover;
     background-position: center;
 }
 
+/* Screen Reader Only Class: Set the following styles so text is displayed off screen, not displayed to user but read by screen reader. */
+.sr-only{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* float-left class: Used to position images on the left side. */
 .float-left {
     float: left;
     margin-right: 25px;
 }
 
+/* float-right class: Used to position images on the right side. */
 .float-right {
     float: right;
     margin-left: 25px;
 }
 
-.content {
+/* section-content class: Styles for the whole section element that displays the web page content.  
+   Sets width, left margin and display as an inline-block. */
+.section-content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-.benefits {
+/* article-content class: Styles used for each article element.  
+   Sets the bottom margin, padding, height, font, color and background color. */
+.article-content {
+    margin-bottom: 20px;
+    padding: 50px; 
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+/* img element for article-content class: Sets the max height to 200 pixels. */ 
+.article-content img {
+    max-height: 200px;
+}
+
+/* h2 header element for article-content class: Sets the bottom margin and font size.*/
+.article-content h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* aside-benefit class: Styles the aside element.  Sets the right margin, padding, 
+   clear: both = Set container element so its stretched to its floated element dimensions,
+   sets floats right, width, height, font and background color. */
+.aside-benefit {
     margin-right: 20px;
     padding: 20px;
     clear: both;
-    float: right;
+    float: right; 
     width: 20%;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
 }
 
-.benefit-lead {
+/* section-benefit class: Styles the section elements contained inside the aside element.
+   Sets the bottom margin and color values.*/
+.section-benefit {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
+/* h3 element for section-benefit class: Sets the bottm margin and centers the text. */
+.section-benefit h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+/* image element for section-benefit class: Set the display to block, margin and max-width values. */
+.section-benefit img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
+/* footer class: Set the padding, clear: both = Set container element so its stretched to its floated element dimensions,
+   set the font and center the text. */
 .footer {
     padding: 30px;
     clear: both;
@@ -195,6 +167,7 @@ p {
     text-align: center;
 }
 
+/* h2 element in footer class: Set the font size to 20 pixels. */
 .footer h2 {
     font-size: 20px;
 }
